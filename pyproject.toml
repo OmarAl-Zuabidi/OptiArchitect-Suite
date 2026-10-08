@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "optiarchitect"
+dynamic = ["version"]
+description = "Interactive bilingual (English/Arabic) toolkit for teaching Operations Research and optimization"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Omar Ahmed Mohammed Al-Zuabidi" }]
+keywords = ["operations research", "linear programming", "simplex", "transportation problem",
+            "hungarian algorithm", "nonlinear optimization", "education", "arabic"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Arabic",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+nlp    = ["sympy>=1.12"]                         # Part 3 (safe formulas + derivatives)
+plot   = ["matplotlib>=3.7"]                     # graphical method
+arabic = ["arabic-reshaper>=3.0", "python-bidi>=0.4.2"]   # Arabic text in consoles / plots
+web    = ["streamlit>=1.30", "pandas>=2.0", "sympy>=1.12", "matplotlib>=3.7"]
+all    = ["optiarchitect[nlp,plot,arabic,web]"]
+
+[project.scripts]
+optiarchitect = "optiarchitect.cli:main"
+optiarchitect-web = "optiarchitect.web:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "optiarchitect.config.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["optiarchitect*"]
