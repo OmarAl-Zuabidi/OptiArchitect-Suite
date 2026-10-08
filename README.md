@@ -67,7 +67,7 @@ python -m unittest discover -s tests -t . -v
 ## Citation
 
 See `CITATION.cff`. Al-Zuabidi, O. A. M. (2026). *OptiArchitect: an interactive bilingual toolkit for
-teaching operations research and optimization.* [Journal / DOI to be completed upon publication.]
+teaching operations research and optimization.* [(https://doi.org/10.5281/zenodo.23231207)]
 
 ## Licence
 
