@@ -2,6 +2,8 @@
 
 Interactive, bilingual (English / Arabic) toolkit for teaching Operations Research.
 
+🌐 **[Live Web Demo (Streamlit App)](https://optiarchitect.streamlit.app)** — Explore the interactive web interface directly in your browser.
+
 | Part | Topic | Methods |
 |---|---|---|
 | 1 | Linear Programming | Standard, Dual and Two-Phase Simplex; graphical method (2 variables) |
