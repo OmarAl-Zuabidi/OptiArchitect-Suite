@@ -27,7 +27,15 @@ classifiers = [
     "Topic :: Education",
     "Topic :: Scientific/Engineering :: Mathematics",
 ]
-dependencies = ["numpy>=1.24"]
+dependencies = [
+    "numpy>=1.24",
+    "sympy>=1.12",
+    "matplotlib>=3.7",
+    "arabic-reshaper>=3.0",
+    "python-bidi>=0.4.2",
+    "streamlit>=1.30",
+    "pandas>=2.0"
+]
 
 [project.optional-dependencies]
 nlp    = ["sympy>=1.12"]                         # Part 3 (safe formulas + derivatives)
