@@ -34,7 +34,6 @@ nlp    = ["sympy>=1.12"]                         # Part 3 (safe formulas + deriv
 plot   = ["matplotlib>=3.7"]                     # graphical method
 arabic = ["arabic-reshaper>=3.0", "python-bidi>=0.4.2"]   # Arabic text in consoles / plots
 web    = ["streamlit>=1.30", "pandas>=2.0", "sympy>=1.12", "matplotlib>=3.7"]
-all    = ["optiarchitect[nlp,plot,arabic,web]"]
 
 [project.scripts]
 optiarchitect = "optiarchitect.cli:main"
