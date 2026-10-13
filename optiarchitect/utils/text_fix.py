@@ -9,7 +9,8 @@ def fix_ar(text: str) -> str:
     try:
         import arabic_reshaper
         from bidi.algorithm import get_display
-        return get_display(arabic_reshaper.reshape(text))
+        reshaped_text = arabic_reshaper.reshape(text)
+        return get_display(reshaped_text, base_dir='R')
     except ImportError:
         if not _AR_WARNED:
             print("[!] pip install arabic-reshaper python-bidi   "
