@@ -4,6 +4,10 @@ from typing import Optional
 
 import numpy as np
 
+import matplotlib.pyplot as plt
+plt.rcParams['font.sans-serif'] = ['Tahoma', 'Arial', 'DejaVu Sans', 'Cairo']
+plt.rcParams['axes.unicode_minus'] = False
+
 from optiarchitect.config import EPS
 from optiarchitect.utils.text_fix import fix_ar
 from optiarchitect.utils.parser import Objective
